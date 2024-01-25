@@ -1,0 +1,15 @@
+KOMUNIKASI
+jenis-jenis berdasar arah pengiriman data komunikasi:
+1. simplex >> bersifat satu arah. komponen yang menjadi transmitter tidak akan bisa sebagai receiver begitu juga sebaliknya. kelebihannya transfer data minim gangguan
+2. half-duplex >> bersifat dua arah. komponen bisa sebagai transmitter dan receiver tapi ini tidak bisa terjadi dalam waktu yang bersamaan. pertukaran atau pengiriman data terjadi secara bergantian. karena hanya ada satu jalur.
+3. full-duplex >> bersifat dua arah juga tapi memiliki jalur pengiriman data yang berbeda. sehingga proses transmitt dan receive pada satu komponen bisa terjadi secara bersamaan
+
+Jenis- jenis komunikasi
+komunikasi SPI
+terdiri dari master yang memberi perintah (biasanya mikrokontroler) dan slave yang bisanya berupa sensor. bersifat full-duplex. jadi pengiriman data bisa dari dua arah pada waktu bersamaan karena komunikasi ini memiliki 4 pin berbeda, yaitu: MOSI (dari master ke slave), MISO (dari slave ke master), SCLK (sumber clock), SS/CS(untuk memilih slave)
+komuniksi I2C
+terdiri dari master dan slave juga bedanya terletak pada jumlah pin yang ada jumlah pin hanya ada 2 SDA dan SCL. pertukaran data pada pin SDA terjadi secara half-duplex. pengiriman informasi mesti bergantian. kelebihan ada pada address sehingga bisa terhubungan dengan beberapa slave dengan kode yang unik.
+komunikasi UART
+mirip I2C. namun bisa half-duplex atau full-duplex. memiliki 3 pin, yaitu: RX,TX, GND. hubungannya bersifat menyilang sehingga pengiriman data bisa secara bersamaan dari dua perangkat. menyilang pada pin RX perangkat satu terhubung ke TX perangkat dua begitupun sebaliknya. komnikasi terjadi secara asinkron
+CAN-bus
+jenis komunikasi pada yang alat yang bisa bergerak. jadi mikrokontroler dapat terhubung dengan perangkat tanpa harus terhubung ke komputer host. bersifat half-duplex.
